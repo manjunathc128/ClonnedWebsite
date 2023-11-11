@@ -1,0 +1,159 @@
+
+*{
+    box-sizing: border-box;
+}
+:root{
+    --blue-color:rgb(9, 179, 241);
+    --green-color: rgb(13, 231, 46);
+}
+
+
+.navbar{
+    display: flex;
+    /* border:1px solid; */
+    justify-content: space-around;
+    padding:10px;
+}
+
+
+div.dropdown > a{
+    text-decoration: none;
+    display: inline-block;
+    margin:0;
+    padding: 10px 0 30px; /* top bottom padding are not respected for inline element */
+    /* border:1px solid purple; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.dropdown{
+    position: relative;
+    margin:0;
+} 
+div.content{
+    width:40%;
+    display: flex;
+    /* border:1px solid; */
+    justify-self: center;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+div.logo{
+    justify-self:normal;
+}
+
+div i.fa-solid{
+    padding: 10px 0 30px 5px;
+    margin:0;
+    cursor: pointer;
+
+}
+
+div.dropdown-content{
+    display: none;
+    /* z-index: 1; */
+}
+
+div.products, div.pricing, div.resources, div.about{
+    height: 150px;
+    width: 150px;
+    background-color: black;
+    border:1px solid pink;
+    box-shadow: 5px 5px 10px 5px pink ;
+    position: absolute;
+    z-index: 1;
+}
+
+div.dropdown:hover > div.dropdown-content{
+    display: block;
+}
+
+div.downinfo{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;   
+}
+
+div.downinfo h1{
+    font-size: 48px; 
+    font-weight: normal;
+    color:rgba(0,0,0,0.8);
+}
+
+div.downinfo h2{
+    width:70%;
+    color:rgba(0,0,0,0.8);
+    text-align: center !important ;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+div.downinfo > button{
+    display: inline;
+    padding:20px;
+    background-color: var( --blue-color);
+    border:1px solid var( --blue-color);  
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+}
+
+div.grid-1{
+    width:70vw;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 33.33% 33.33% 33.33% ;
+    grid-template-rows: 4;
+    gap:15px;
+}
+
+div.grid-item{
+    /* display: grid; */
+    padding:10px;
+    background-color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    
+}
+
+
+div.btn{
+    /* display: flex;
+    justify-content:space-around ; */
+    display: grid;
+    grid-template-areas: "bt1 bt2" ;
+    gap: 0 8px;
+}
+
+div.btn > button{
+    /* float: left; */
+    display: inline;
+    grid-area: bt1 bt2;
+    padding:10px 0;
+    background-color: var(--blue-color);
+    border:1px solid var(--blue-color);
+    border-radius: 5px;
+    /* margin: 0 auto;  */
+    color: white;
+    text-transform: capitalize;
+    font-size:0.70em; 
+    font-weight: bold;
+}
+
+div.btn :last-child{
+    background-color: var(--green-color);
+    border:1px solid var(--green-color);
+}
+
+div.grid-item > h3{
+    text-align: center;
+}
+
+div.grid-item > h5{
+    text-align: center;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
